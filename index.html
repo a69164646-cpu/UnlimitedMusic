@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#b90020"><meta name="description" content="Unlimited Music, il tuo lettore musicale gratuito.">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<title>Unlimited Music</title>
+</head>
+<body>
+<header><div class="brand"><div class="logo">♫</div><div><h1>UNLIMITED <span>MUSIC</span></h1><small>La musica, come vuoi tu</small></div></div><button id="addFiles" class="outline">＋ Brani</button><input id="filePicker" type="file" accept="audio/*" multiple hidden></header>
+<main>
+<section class="hero"><p class="eyebrow">IL TUO SPAZIO MUSICALE</p><h2>La tua musica.<br><span>Senza limiti.</span></h2><p>Ascolta i tuoi file, organizza i preferiti e crea le tue playlist.</p><button id="heroAdd" class="primary">Scegli musica dal telefono</button></section>
+<section class="searchrow"><input id="search" type="search" placeholder="Cerca brani online o nella tua libreria…" aria-label="Cerca brani"><button id="searchBtn" class="primary">Cerca</button></section>
+<section class="notice" id="onlineNotice"><b>Catalogo online gratuito</b><p>Cerca musica indipendente tramite il catalogo Jamendo. I brani sono soggetti alle rispettive licenze; tocca “Apri fonte” per vedere la pagina dell'artista. Per distribuire l'app, configura un tuo Client ID Jamendo e verifica le condizioni d'uso.</p></section>
+<div id="status" class="status" role="status" aria-live="polite">Pronto per cercare musica online.</div>
+<nav class="tabs"><button class="tab active" data-view="all">Tutti i brani</button><button class="tab" data-view="favorites">♥ Preferiti</button><button class="tab" data-view="playlists">Playlist</button></nav>
+<section id="playlistTools" class="playlist-tools" hidden><input id="playlistName" placeholder="Nome della playlist"><button id="createPlaylist" class="primary">Crea</button><select id="playlistSelect" aria-label="Scegli playlist"><option value="">Scegli playlist</option></select></section>
+<section id="content"><div class="empty"><div class="empty-icon">♫</div><h3>La tua musica ti aspetta</h3><p>Aggiungi i file audio dal Redmi per iniziare ad ascoltare.</p><button class="primary" id="emptyAdd">＋ Aggiungi brani</button></div></section>
+</main>
+<footer><div class="now"><div class="cover" id="nowCover">♫</div><div class="track-meta"><b id="nowTitle">Nessun brano in riproduzione</b><small id="nowArtist">Scegli un file audio</small></div></div><div class="controls"><button id="prev" aria-label="Precedente">⏮</button><button id="play" class="play" aria-label="Riproduci">▶</button><button id="next" aria-label="Successivo">⏭</button></div><div class="progress"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="1000" value="0"><span id="duration">0:00</span></div><audio id="audio"></audio></footer>
+<script src="app.js"></script>
+</body></html>
